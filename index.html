@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\style.css">
+    <title>
+        Cadastro
+    </title>
+</head>
+
+<body>
+    <form id="formulario">
+        
+        <header>
+            <div class="linha">
+                <h1 class="text-center flex-9">Cadastro Cliente/Produto</h1>
+                <div class="margin">
+                    <button class="flex-1 botao" type="submit">Enviar</button>
+                </div>
+            </div>
+        </header>
+        <section id="solicitante">
+            <fieldset>
+                <legend>A Solicitante</legend>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>Data Solicitação</label>
+                        <input type="text" name="data-solicitacao">
+                    </div>
+                    <div class="inputs">
+                        <label>Nome</label>
+                        <input name="nome">
+                    </div>
+                    <div class="inputs">
+                        <label>Área</label>
+                        <input name="area">
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+        <section id="Dados">
+            <fieldset>
+                <legend>Dados do fornecedor</legend>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>Razão social</label>
+                        <input name="razao-social" required>
+                    </div>
+                    <div class="inputs">
+                        <label>CNPJ</label>
+                        <input name="cnpj" required>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>Nome fantasia</label>
+                        <input name="nome-fantasia" required>
+                    </div>
+                    <div class="inputs">
+                        <label>Inscrição estadual</label>
+                        <input name="inscricao-estadual">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>CEP</label>
+                        <input name="cep">
+                    </div>
+                    <div class="inputs">
+                        <label>Inscrição municipal</label>
+                        <input name="inscricao-municipal">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>Endereço</label>
+                        <input name="endereco" required>
+                    </div>
+                    <div class="inputs">
+                        <label>Complemento</label>
+                        <input name="complemento">
+                    </div>
+                    <div class="inputs">
+                        <label>Número</label>
+                        <input name="numero">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>Bairro</label>
+                        <input name="bairro">
+                    </div>
+                    <div class="inputs">
+                        <label>Estado</label>
+                        <input name="estado">
+                    </div>
+                    <div class="inputs">
+                        <label>Municipio</label>
+                        <input name="municipio">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>Nome da pessoa de contato</label>
+                        <input name="contato" required>
+                    </div>
+                    <div class="inputs">
+                        <label>Telefone</label>
+                        <input name="telefone" required>
+                    </div>
+                    <div class="inputs">
+                        <label>Email</label>
+                        <input name="email" required>
+                    </div>
+                </div>
+        </section>
+        <section id="Produtos">
+            <fieldset>
+                <legend>Produtos</legend>
+                <fieldset>
+                    <legend>Item 1</legend>
+                    <div class="linha">
+                        <div>
+                            <label>Descrição do produto</label>
+                            <input name="descricao-produto" required>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="inputs">
+                            <label>Und. Medida</label>
+                            <select name="unidade-medida" required>
+                                <option>Kilograma</option>
+                                <option>Grama</option>
+                            </select>
+                        </div>
+                        <div class="inputs">
+                            <label>Qtde. em Estoque</label>
+                            <input name="qtd-estoque" required id="qtd" onchange="calcularTotal()">
+                        </div>
+                        <div class="inputs">
+                            <label>Valor unitário</label>
+                            <input name="valor-unitario" required id="valor" onchange="calcularTotal()">
+                        </div>
+                        <div class="inputs">
+                            <label>Valor total</label>
+                            <input name="valor-total" required readonly id="total">
+                        </div>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </section>
+        <section id="Anexos">
+            <fieldset>
+                <legend>Anexos</legend>
+                <div class="linha">
+                    <div class="inputs">
+                        <label>Anexar</label>
+                        <input type="file" name="anexo">
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+    </form>
+</body>
+<script src="\script.js"></script>

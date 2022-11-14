@@ -1,0 +1,33 @@
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex: 1
+}
+
+
+.linha {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-1 {
+    flex: 1
+}
+
+.flex-9 {
+    flex: 9
+}
+
+.botao {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.margin {
+    margin-top: 15px
+}
